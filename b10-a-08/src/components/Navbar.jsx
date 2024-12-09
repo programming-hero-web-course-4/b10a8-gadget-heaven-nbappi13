@@ -58,6 +58,13 @@ const Navbar = () => {
                     >
                         Dashboard
                     </NavLink>
+                    <NavLink
+                        to="/support"
+                        className={activeRoute === "/support" ? "text-green-500 font-bold" : "text-white"}
+                        onClick={() => handleLinkClick("/support")}
+                    >
+                        Support
+                    </NavLink>
                 </div>
 
                 {/* Icon Buttons */}

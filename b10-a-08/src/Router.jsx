@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Statistics from './pages/Statistics';
 import Dashboard from './pages/Dashboard';
 import ErrorPage from './pages/ErrorPage';
+import Support from './pages/Support';
 
 const router = createBrowserRouter([
     {
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
             { path: '/', element: <Home /> },
             { path: 'statistics', element: <Statistics /> },
             { path: 'dashboard', element: <Dashboard /> },
+            {path: 'support', element: <Support/>},
         ],
     },
     {

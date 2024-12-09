@@ -1,33 +1,20 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { SiEngadget } from "react-icons/si";
 import { BsCart3 } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
 import { useEffect, useState } from 'react';
 
 const Navbar = () => {
-    const [activeRoute, setActiveRoute] = useState(""); // Track active route
+    const location = useLocation(); 
+    const [activeRoute, setActiveRoute] = useState(location.pathname); 
 
-    // Reset active state on reload
+
     useEffect(() => {
-        const handleReload = () => {
-            setActiveRoute(""); // Clear active route
-        };
-
-        // Add the event listener
-        window.addEventListener("beforeunload", handleReload);
-
-        // Cleanup event listener on component unmount
-        return () => {
-            window.removeEventListener("beforeunload", handleReload);
-        };
-    }, []);
-
-    const handleLinkClick = (route) => {
-        setActiveRoute(route); // Update active route when a link is clicked
-    };
+        setActiveRoute(location.pathname); 
+    }, [location]);
 
     return (
-        <nav className="bg-gray-800 p-4">
+        <nav className="bg-purple-500 p-4 rounded-t-xl">
             <div className="container mx-auto flex justify-between items-center">
                 {/* Logo Section */}
                 <div className="flex items-center">
@@ -40,28 +27,24 @@ const Navbar = () => {
                     <NavLink
                         to="/"
                         className={activeRoute === "/" ? "text-green-500 font-bold" : "text-white"}
-                        onClick={() => handleLinkClick("/")}
                     >
                         Home
                     </NavLink>
                     <NavLink
                         to="/statistics"
                         className={activeRoute === "/statistics" ? "text-green-500 font-bold" : "text-white"}
-                        onClick={() => handleLinkClick("/statistics")}
                     >
                         Statistics
                     </NavLink>
                     <NavLink
                         to="/dashboard"
                         className={activeRoute === "/dashboard" ? "text-green-500 font-bold" : "text-white"}
-                        onClick={() => handleLinkClick("/dashboard")}
                     >
                         Dashboard
                     </NavLink>
                     <NavLink
                         to="/support"
                         className={activeRoute === "/support" ? "text-green-500 font-bold" : "text-white"}
-                        onClick={() => handleLinkClick("/support")}
                     >
                         Support
                     </NavLink>

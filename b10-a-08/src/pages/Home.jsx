@@ -20,7 +20,8 @@ const Home = () => {
     const [filteredProducts, setFilteredProducts] = useState([]); 
     const [visibleProductsCount, setVisibleProductsCount] = useState(12); 
     const [currentCategory, setCurrentCategory] = useState("All Products"); 
-    const [isLoading, setIsLoading] = useState(true); 
+    const [loading, setLoading] = useState(true); 
+
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -28,13 +29,11 @@ const Home = () => {
                 const response = await fetch('/products.json');
                 const data = await response.json();
                 setAllProducts(data);
-                setIsLoading(true);
-                setTimeout(() => { 
-                    setFilteredProducts(data.slice(0, 12)); 
-                    setIsLoading(false);
-                }, 1000); 
+                setFilteredProducts(data.slice(0, 12)); 
+                setLoading(false); 
             } catch (error) {
                 console.error('Error fetching the products:', error);
+                setLoading(false); 
             }
         };
 
@@ -45,16 +44,12 @@ const Home = () => {
         setCurrentCategory(category);
         setVisibleProductsCount(12); 
 
-        setIsLoading(true);
-        setTimeout(() => {
-            if (category === "All Products") {
-                setFilteredProducts(allProducts.slice(0, 12));
-            } else {
-                const filtered = allProducts.filter(product => product.category === category);
-                setFilteredProducts(filtered.slice(0, 12)); 
-            }
-            setIsLoading(false);
-        }, 1000); 
+        if (category === "All Products") {
+            setFilteredProducts(allProducts.slice(0, 12));
+        } else {
+            const filtered = allProducts.filter(product => product.category === category);
+            setFilteredProducts(filtered.slice(0, 12)); 
+        }
     };
 
     const loadMoreProducts = () => {
@@ -91,18 +86,18 @@ const Home = () => {
                 </aside>
 
                 <section className="w-full md:w-3/4">
-                    <h2 className="text-2xl font-bold  text-gray-800 text-left ml-8 mb-10">
+                    <h2 className="text-2xl font-bold mb-6 text-gray-800 text-left ml-8 mb-10">
                         Explore Cutting-Edge Gadgets
                     </h2>
-                    {isLoading ? (
-                        <div className="flex justify-center">
+                    {loading ? (
+                        <div className="flex justify-center items-center">
                             <span className="loading loading-bars loading-lg"></span>
                         </div>
                     ) : (
                         <GadgetsCards
                             products={filteredProducts}
                             loadMoreProducts={loadMoreProducts}
-                            showMoreButton={currentCategory === "All Products" && visibleProductsCount < allProducts.length} 
+                            showMoreButton={currentCategory === "All Products" && visibleProductsCount < allProducts.length} // Show button only for All Products
                             noDataMessage={filteredProducts.length === 0}
                         />
                     )}

@@ -8,7 +8,7 @@ const CategoriesSidebar = ({ categories, onSelectCategory }) => {
                 {categories.map((category, index) => (
                     <li key={index}>
                         <button
-                            className="w-full text-left p-2 hover:bg-purple-100 rounded-md"
+                            className="w-full text-left p-2 hover:bg-purple-100 rounded-md transition-transform transform hover:scale-105" 
                             onClick={() => onSelectCategory(category)}
                         >
                             {category}

@@ -16,7 +16,10 @@ const GadgetsCards = ({ products, loadMoreProducts, showMoreButton, noDataMessag
         <div className="relative">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {products.map((product) => (
-                    <div key={product.product_id} className="p-4 bg-gray-200 rounded-md flex flex-col justify-center items-center shadow-md">
+                    <div 
+                        key={product.product_id} 
+                        className="p-4 bg-gray-200 rounded-md flex flex-col justify-center items-center shadow-md transition-transform transform hover:scale-105" // Added transition
+                    >
                         <img
                             src={product.product_image}
                             alt={product.product_title}

@@ -1,0 +1,319 @@
+[
+    {
+        "product_id": "1",
+        "product_title": "Dell XPS 13",
+        "product_image": "https://i.ibb.co/WPfKgd5/Dell-XPS-13.jpg",
+        "category": "Laptops",
+        "price": 1200,
+        "description": "Dell XPS 13 with 10th Gen Intel Core i7 processor",
+        "specification": [
+            "10th Gen Intel Core i7",
+            "16GB RAM",
+            "512GB SSD",
+            "13.3-inch FHD Display"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "2",
+        "product_title": "MacBook Air",
+        "product_image": "https://i.ibb.co/2sQWpnq/Mac-Book-Air.png",
+        "category": "Laptops",
+        "price": 999,
+        "description": "Apple MacBook Air with M1 Chip",
+        "specification": [
+            "Apple M1 Chip",
+            "8GB RAM",
+            "256GB SSD",
+            "13.3-inch Retina Display"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "3",
+        "product_title": "HP Spectre x360",
+        "product_image": "https://i.ibb.co/kG7KwDY/HP-Spectre-x360.webp",
+        "category": "Laptops",
+        "price": 1250,
+        "description": "HP Spectre x360 with 11th Gen Intel Core i7 processor",
+        "specification": [
+            "11th Gen Intel Core i7",
+            "16GB RAM",
+            "512GB SSD",
+            "13.3-inch OLED Display"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "4",
+        "product_title": "Asus ZenBook 14",
+        "product_image": "https://i.ibb.co/5WbyC17/Asus-Zen-Book-14.png",
+        "category": "Laptops",
+        "price": 1100,
+        "description": "Asus ZenBook 14 with AMD Ryzen 7 processor",
+        "specification": [
+            "AMD Ryzen 7",
+            "16GB RAM",
+            "512GB SSD",
+            "14-inch FHD Display"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "5",
+        "product_title": "Lenovo ThinkPad X1",
+        "product_image": "https://i.ibb.co/zGLTqhv/Lenovo-Think-Pad-X1.jpg",
+        "category": "Laptops",
+        "price": 1300,
+        "description": "Lenovo ThinkPad X1 Carbon with 10th Gen Intel Core i7 processor",
+        "specification": [
+            "10th Gen Intel Core i7",
+            "16GB RAM",
+            "1TB SSD",
+            "14-inch FHD Display"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "6",
+        "product_title": "Microsoft Surface Laptop 4",
+        "product_image": "https://i.ibb.co/jGn9yzB/Microsoft-Surface-Laptop-4.jpg",
+        "category": "Laptops",
+        "price": 1400,
+        "description": "Microsoft Surface Laptop 4 with AMD Ryzen 7 processor",
+        "specification": [
+            "AMD Ryzen 7",
+            "16GB RAM",
+            "512GB SSD",
+            "13.5-inch PixelSense Display"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "7",
+        "product_title": "iPhone 12",
+        "product_image": "https://i.ibb.co/YpHvSfh/i-Phone-12.jpg",
+        "category": "Phones",
+        "price": 799,
+        "description": "Apple iPhone 12 with A14 Bionic chip",
+        "specification": [
+            "A14 Bionic chip",
+            "64GB Storage",
+            "6.1-inch Super Retina XDR Display",
+            "Dual 12MP cameras"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "8",
+        "product_title": "Samsung Galaxy S21",
+        "product_image": "https://i.ibb.co/s5tLk35/Samsung-Galaxy-S21.jpg",
+        "category": "Phones",
+        "price": 850,
+        "description": "Samsung Galaxy S21 with Exynos 2100",
+        "specification": [
+            "Exynos 2100",
+            "128GB Storage",
+            "6.2-inch Dynamic AMOLED Display",
+            "Triple 12MP + 64MP + 12MP cameras"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "9",
+        "product_title": "Google Pixel 5",
+        "product_image": "https://i.ibb.co/sHC82KV/Google-Pixel-5.jpg",
+        "category": "Phones",
+        "price": 700,
+        "description": "Google Pixel 5 with Snapdragon 765G",
+        "specification": [
+            "Snapdragon 765G",
+            "128GB Storage",
+            "6.0-inch OLED Display",
+            "Dual 12.2MP + 16MP cameras"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "10",
+        "product_title": "OnePlus 8T",
+        "product_image": "https://i.ibb.co/z2s0YGP/One-Plus-8-T.jpg",
+        "category": "Phones",
+        "price": 750,
+        "description": "OnePlus 8T with Snapdragon 865",
+        "specification": [
+            "Snapdragon 865",
+            "128GB Storage",
+            "6.55-inch Fluid AMOLED Display",
+            "Quad 48MP + 16MP + 5MP + 2MP cameras"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "11",
+        "product_title": "Sony Xperia 5 II",
+        "product_image": "https://i.ibb.co/Qpcgj7y/Sony-Xperia-5-II.jpg",
+        "category": "Phones",
+        "price": 950,
+        "description": "Sony Xperia 5 II with Snapdragon 865",
+        "specification": [
+            "Snapdragon 865",
+            "128GB Storage",
+            "6.1-inch OLED Display",
+            "Triple 12MP cameras"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "12",
+        "product_title": "Sony WH-1000XM4",
+        "product_image": "https://i.ibb.co/BjfNcKM/Sony-WH-1000-XM4.jpg",
+        "category": "Headphones",
+        "price": 350,
+        "description": "Sony WH-1000XM4 Wireless Noise Cancelling Headphones",
+        "specification": [
+            "Wireless",
+            "Noise Cancelling",
+            "30-hour Battery Life"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": "13",
+        "product_title": "Bose QuietComfort 35 II",
+        "product_image": "https://i.ibb.co/cT5S16y/Bose-Quiet-Comfort-35-II.jpg",
+        "category": "Headphones",
+        "price": 300,
+        "description": "Bose QuietComfort 35 II Wireless Bluetooth Headphones",
+        "specification": [
+            "Wireless",
+            "Noise Cancelling",
+            "20-hour Battery Life"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "14",
+        "product_title": "Apple AirPods Pro",
+        "product_image": "https://i.ibb.co/LrfrzL8/Apple-Air-Pods-Pro.jpg",
+        "category": "Headphones",
+        "price": 250,
+        "description": "Apple AirPods Pro with Active Noise Cancellation",
+        "specification": [
+            "Active Noise Cancellation",
+            "Transparency Mode",
+            "Wireless Charging Case"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "15",
+        "product_title": "Jabra Elite 85h",
+        "product_image": "https://i.ibb.co/5YXQxb5/Jabra-Elite-85h.jpg",
+        "category": "Headphones",
+        "price": 280,
+        "description": "Jabra Elite 85h Wireless Noise-Canceling Headphones",
+        "specification": [
+            "Wireless",
+            "Noise Cancelling",
+            "36-hour Battery Life"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+
+    {
+        "product_id": "16",
+        "product_title": "Fitbit Versa 3",
+        "product_image": "https://i.ibb.co/NTNFvzd/Fitbit-Versa-3.jpg",
+        "category": "Smart Watches",
+        "price": 230,
+        "description": "Fitbit Versa 3 Health & Fitness Smartwatch",
+        "specification": [
+            "Built-in GPS",
+            "Heart Rate Monitor",
+            "Sleep Tracking"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "17",
+        "product_title": "Samsung Galaxy Watch 3",
+        "product_image": "https://i.ibb.co/Pm2PSrM/Samsung-Galaxy-Watch-3.jpg",
+        "category": "Smart Watches",
+        "price": 350,
+        "description": "Samsung Galaxy Watch 3 with Fitness Tracking",
+        "specification": [
+            "Fitness Tracking",
+            "GPS",
+            "Sleep Tracking",
+            "Heart Rate Monitor"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "18",
+        "product_title": "Anker PowerCore 10000",
+        "product_image": "https://i.ibb.co/BNqJh3S/Anker-Power-Core-10000.jpg",
+        "category": "Power Bank",
+        "price": 50,
+        "description": "Anker PowerCore 10000 Portable Charger",
+        "specification": [
+            "10000mAh Capacity",
+            "Compact Size",
+            "Fast Charging"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "19",
+        "product_title": "Razer DeathAdder V2",
+        "product_image": "https://i.ibb.co/gmMHscZ/Razer-Death-Adder-V2.jpg",
+        "category": "Mouse",
+        "price": 70,
+        "description": "Razer DeathAdder V2 Gaming Mouse",
+        "specification": [
+            "Ergonomic Design",
+            "20,000 DPI Optical Sensor",
+            "Razer Speedflex Cable"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "20",
+        "product_title": "Logitech MX Keys",
+        "product_image": "https://i.ibb.co/2c57YHZ/Logitech-MX-Keys.jpg",
+        "category": "Keyboard",
+        "price": 99,
+        "description": "Logitech MX Keys Advanced Wireless Illuminated Keyboard",
+        "specification": [
+            "Wireless",
+            "Illuminated Keys",
+            "USB-C Rechargeable"
+        ],
+        "availability": true,
+        "rating": 4.7
+    }
+   
+]
+
+
+

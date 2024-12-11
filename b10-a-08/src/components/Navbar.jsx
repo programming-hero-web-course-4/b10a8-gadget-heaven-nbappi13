@@ -22,7 +22,6 @@ const Navbar = () => {
                     <div className="text-white text-lg font-bold">Gadget Heaven</div>
                 </div>
 
-                {/* Navigation Links */}
                 <div className="flex space-x-4">
                     <NavLink
                         to="/"
@@ -50,15 +49,12 @@ const Navbar = () => {
                     </NavLink>
                 </div>
 
-                {/* Icon Buttons */}
                 <div className="flex space-x-4">
-                    {/* Cart Icon */}
                     <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-green-600">
                         <button className="text-black">
                             <BsCart3 />
                         </button>
                     </div>
-                    {/* Heart Icon */}
                     <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-green-600">
                         <button className="text-black">
                             <FaRegHeart />

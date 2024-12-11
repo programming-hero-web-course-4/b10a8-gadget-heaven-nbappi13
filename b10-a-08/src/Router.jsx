@@ -5,14 +5,20 @@ import Statistics from './pages/Statistics';
 import Dashboard from './pages/Dashboard';
 import ErrorPage from './pages/ErrorPage';
 import Support from './pages/Support';
+import Banner from './components/Banner';
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <App />,
-        errorElement: <ErrorPage />, // ErrorPage for any invalid routes
+        errorElement: <ErrorPage />, 
         children: [
-            { path: '/', element: <Home /> },
+            {
+                 path: '/', element: <Home />,
+                 children: [
+                    {path: 'banner', element: <Banner/> },
+                 ],
+            },
             { path: 'statistics', element: <Statistics /> },
             { path: 'dashboard', element: <Dashboard /> },
             {path: 'support', element: <Support/>},
@@ -20,7 +26,7 @@ const router = createBrowserRouter([
     },
     {
         path: '*',
-        element: <ErrorPage />, // Catch-all route for undefined paths
+        element: <ErrorPage />, 
     },
 ]);
 

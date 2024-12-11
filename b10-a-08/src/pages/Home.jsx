@@ -22,7 +22,6 @@ const Home = () => {
     const [currentCategory, setCurrentCategory] = useState("All Products"); 
     const [loading, setLoading] = useState(true); 
 
-
     useEffect(() => {
         const fetchProducts = async () => {
             try {
@@ -43,13 +42,17 @@ const Home = () => {
     const handleCategorySelect = (category) => {
         setCurrentCategory(category);
         setVisibleProductsCount(12); 
+        setLoading(true); 
 
-        if (category === "All Products") {
-            setFilteredProducts(allProducts.slice(0, 12));
-        } else {
-            const filtered = allProducts.filter(product => product.category === category);
-            setFilteredProducts(filtered.slice(0, 12)); 
-        }
+        setTimeout(() => {
+            if (category === "All Products") {
+                setFilteredProducts(allProducts.slice(0, 12));
+            } else {
+                const filtered = allProducts.filter(product => product.category === category);
+                setFilteredProducts(filtered.slice(0, 12)); 
+            }
+            setLoading(false); 
+        }, 500); 
     };
 
     const loadMoreProducts = () => {
@@ -82,6 +85,7 @@ const Home = () => {
                     <CategoriesSidebar
                         categories={categories}
                         onSelectCategory={handleCategorySelect}
+                        activeCategory={currentCategory} 
                     />
                 </aside>
 
@@ -97,7 +101,7 @@ const Home = () => {
                         <GadgetsCards
                             products={filteredProducts}
                             loadMoreProducts={loadMoreProducts}
-                            showMoreButton={currentCategory === "All Products" && visibleProductsCount < allProducts.length} // Show button only for All Products
+                            showMoreButton={currentCategory === "All Products" && visibleProductsCount < allProducts.length} 
                             noDataMessage={filteredProducts.length === 0}
                         />
                     )}

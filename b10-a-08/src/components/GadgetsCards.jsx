@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Spinner from './Spinner';
 
 const GadgetsCards = ({ products, loadMoreProducts, showMoreButton, noDataMessage }) => {
@@ -18,7 +19,7 @@ const GadgetsCards = ({ products, loadMoreProducts, showMoreButton, noDataMessag
                 {products.map((product) => (
                     <div 
                         key={product.product_id} 
-                        className="p-4 bg-gray-200 rounded-md flex flex-col justify-center items-center shadow-md transition-transform transform hover:scale-105" // Added transition
+                        className="p-4 bg-gray-200 rounded-md flex flex-col justify-center items-center shadow-md transition-transform transform hover:scale-105"
                     >
                         <img
                             src={product.product_image}
@@ -27,16 +28,18 @@ const GadgetsCards = ({ products, loadMoreProducts, showMoreButton, noDataMessag
                         />
                         <h4 className="font-bold text-sm mb-2">{product.product_title}</h4>
                         <p className="text-sm mb-2">Price: ${product.price}</p>
-                        <button className="text-purple-500 border border-purple-500 rounded px-2 py-1 hover:bg-purple-100 transition-all">
-                            View Details
-                        </button>
+                        <Link to={`/details/${product.product_id}`}>
+                            <button className="text-purple-500 border border-purple-500 rounded px-2 py-1 hover:bg-purple-100 transition-all">
+                                View Details
+                            </button>
+                        </Link>
                     </div>
                 ))}
             </div>
 
             {noDataMessage && (
                 <div className="flex justify-center mt-4">
-                    <p  className='text-2xl '>No data found! 🤦‍♂️ 😭</p>
+                    <p className='text-2xl '>No data found! 🤦‍♂️ 😭</p>
                 </div>
             )}
 

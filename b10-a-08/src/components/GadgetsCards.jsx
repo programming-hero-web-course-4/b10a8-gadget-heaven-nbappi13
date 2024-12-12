@@ -29,7 +29,7 @@ const GadgetsCards = ({ products, loadMoreProducts, showMoreButton, noDataMessag
                         <h4 className="font-bold text-sm mb-2">{product.product_title}</h4>
                         <p className="text-sm mb-2">Price: ${product.price}</p>
                         <Link to={`/details/${product.product_id}`}>
-                            <button className="text-purple-500 border border-purple-500 rounded px-2 py-1 hover:bg-purple-100 transition-all">
+                            <button className="text-purple-500 border border-purple-500 rounded px-2 py-1 hover:bg-purple-300 transition-all">
                                 View Details
                             </button>
                         </Link>
@@ -50,7 +50,7 @@ const GadgetsCards = ({ products, loadMoreProducts, showMoreButton, noDataMessag
                     ) : (
                         <button
                             onClick={handleShowMore}
-                            className="text-white bg-purple-500 bg-opacity-75 rounded-full px-4 py-2 shadow-lg hover:bg-purple-600 transition-all"
+                            className="text-white bg-purple-400 bg-opacity-75 rounded-full px-4 py-2 shadow-lg hover:bg-purple-800 transition-all"
                         >
                             More Products
                         </button>

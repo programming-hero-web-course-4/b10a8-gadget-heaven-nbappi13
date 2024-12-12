@@ -36,7 +36,7 @@ const WishlistPage = () => {
                             </button>
                             <button
                                 onClick={() => handleRemoveFromWishlist(item.product_id)}
-                                className="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600"
+                                className="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600 ml-3"
                             >
                                 Remove
                             </button>

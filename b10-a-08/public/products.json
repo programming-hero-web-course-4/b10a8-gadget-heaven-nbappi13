@@ -4,7 +4,7 @@
         "product_title": "Dell XPS 13",
         "product_image": "https://i.ibb.co/WPfKgd5/Dell-XPS-13.jpg",
         "category": "Laptops",
-        "price": 1200,
+        "price": 300,
         "description": "Dell XPS 13 with 10th Gen Intel Core i7 processor",
         "specification": [
             "10th Gen Intel Core i7",
@@ -20,7 +20,7 @@
         "product_title": "MacBook Air",
         "product_image": "https://i.ibb.co/2sQWpnq/Mac-Book-Air.png",
         "category": "Laptops",
-        "price": 999,
+        "price": 400,
         "description": "Apple MacBook Air with M1 Chip",
         "specification": [
             "Apple M1 Chip",
@@ -36,7 +36,7 @@
         "product_title": "HP Spectre x360",
         "product_image": "https://i.ibb.co/kG7KwDY/HP-Spectre-x360.webp",
         "category": "Laptops",
-        "price": 1250,
+        "price": 390,
         "description": "HP Spectre x360 with 11th Gen Intel Core i7 processor",
         "specification": [
             "11th Gen Intel Core i7",
@@ -52,7 +52,7 @@
         "product_title": "Asus ZenBook 14",
         "product_image": "https://i.ibb.co/5WbyC17/Asus-Zen-Book-14.png",
         "category": "Laptops",
-        "price": 1100,
+        "price": 400,
         "description": "Asus ZenBook 14 with AMD Ryzen 7 processor",
         "specification": [
             "AMD Ryzen 7",
@@ -68,7 +68,7 @@
         "product_title": "Lenovo ThinkPad X1",
         "product_image": "https://i.ibb.co/zGLTqhv/Lenovo-Think-Pad-X1.jpg",
         "category": "Laptops",
-        "price": 1300,
+        "price": 399,
         "description": "Lenovo ThinkPad X1 Carbon with 10th Gen Intel Core i7 processor",
         "specification": [
             "10th Gen Intel Core i7",
@@ -84,7 +84,7 @@
         "product_title": "Microsoft Surface Laptop 4",
         "product_image": "https://i.ibb.co/jGn9yzB/Microsoft-Surface-Laptop-4.jpg",
         "category": "Laptops",
-        "price": 1400,
+        "price": 470,
         "description": "Microsoft Surface Laptop 4 with AMD Ryzen 7 processor",
         "specification": [
             "AMD Ryzen 7",
@@ -100,7 +100,7 @@
         "product_title": "iPhone 12",
         "product_image": "https://i.ibb.co/YpHvSfh/i-Phone-12.jpg",
         "category": "Phones",
-        "price": 799,
+        "price": 299,
         "description": "Apple iPhone 12 with A14 Bionic chip",
         "specification": [
             "A14 Bionic chip",
@@ -116,7 +116,7 @@
         "product_title": "Samsung Galaxy S21",
         "product_image": "https://i.ibb.co/s5tLk35/Samsung-Galaxy-S21.jpg",
         "category": "Phones",
-        "price": 850,
+        "price": 350,
         "description": "Samsung Galaxy S21 with Exynos 2100",
         "specification": [
             "Exynos 2100",
@@ -132,7 +132,7 @@
         "product_title": "Google Pixel 5",
         "product_image": "https://i.ibb.co/sHC82KV/Google-Pixel-5.jpg",
         "category": "Phones",
-        "price": 700,
+        "price": 399,
         "description": "Google Pixel 5 with Snapdragon 765G",
         "specification": [
             "Snapdragon 765G",
@@ -148,7 +148,7 @@
         "product_title": "OnePlus 8T",
         "product_image": "https://i.ibb.co/z2s0YGP/One-Plus-8-T.jpg",
         "category": "Phones",
-        "price": 750,
+        "price": 250,
         "description": "OnePlus 8T with Snapdragon 865",
         "specification": [
             "Snapdragon 865",
@@ -164,7 +164,7 @@
         "product_title": "Sony Xperia 5 II",
         "product_image": "https://i.ibb.co/Qpcgj7y/Sony-Xperia-5-II.jpg",
         "category": "Phones",
-        "price": 950,
+        "price": 500,
         "description": "Sony Xperia 5 II with Snapdragon 865",
         "specification": [
             "Snapdragon 865",
@@ -180,7 +180,7 @@
         "product_title": "Sony WH-1000XM4",
         "product_image": "https://i.ibb.co/BjfNcKM/Sony-WH-1000-XM4.jpg",
         "category": "Headphones",
-        "price": 350,
+        "price": 150,
         "description": "Sony WH-1000XM4 Wireless Noise Cancelling Headphones",
         "specification": [
             "Wireless",
@@ -195,7 +195,7 @@
         "product_title": "Bose QuietComfort 35 II",
         "product_image": "https://i.ibb.co/cT5S16y/Bose-Quiet-Comfort-35-II.jpg",
         "category": "Headphones",
-        "price": 300,
+        "price": 100,
         "description": "Bose QuietComfort 35 II Wireless Bluetooth Headphones",
         "specification": [
             "Wireless",
@@ -210,7 +210,7 @@
         "product_title": "Apple AirPods Pro",
         "product_image": "https://i.ibb.co/LrfrzL8/Apple-Air-Pods-Pro.jpg",
         "category": "Headphones",
-        "price": 250,
+        "price": 150,
         "description": "Apple AirPods Pro with Active Noise Cancellation",
         "specification": [
             "Active Noise Cancellation",
@@ -225,7 +225,7 @@
         "product_title": "Jabra Elite 85h",
         "product_image": "https://i.ibb.co/5YXQxb5/Jabra-Elite-85h.jpg",
         "category": "Headphones",
-        "price": 280,
+        "price": 180,
         "description": "Jabra Elite 85h Wireless Noise-Canceling Headphones",
         "specification": [
             "Wireless",
@@ -241,7 +241,7 @@
         "product_title": "Fitbit Versa 3",
         "product_image": "https://i.ibb.co/NTNFvzd/Fitbit-Versa-3.jpg",
         "category": "Smart Watches",
-        "price": 230,
+        "price": 130,
         "description": "Fitbit Versa 3 Health & Fitness Smartwatch",
         "specification": [
             "Built-in GPS",
@@ -256,7 +256,7 @@
         "product_title": "Samsung Galaxy Watch 3",
         "product_image": "https://i.ibb.co/Pm2PSrM/Samsung-Galaxy-Watch-3.jpg",
         "category": "Smart Watches",
-        "price": 350,
+        "price": 150,
         "description": "Samsung Galaxy Watch 3 with Fitness Tracking",
         "specification": [
             "Fitness Tracking",

@@ -12,7 +12,8 @@ const AppProvider = ({ children }) => {
     }, [cart, wishlist]);
 
     const addToCart = (product) => {
-        setCart([...cart, product]);
+        const item = { ...product, cartId: Date.now() }; 
+        setCart([...cart, item]);
     };
 
     const addToWishlist = (product) => {
@@ -21,13 +22,9 @@ const AppProvider = ({ children }) => {
         }
     };
 
-    const removeFromCart = (productId) => {
-        const updatedCart = [...cart];
-        const index = updatedCart.findIndex(item => item.product_id === productId);
-        if (index !== -1) {
-            updatedCart.splice(index, 1);
-            setCart(updatedCart);
-        }
+    const removeFromCart = (cartId) => {
+        const updatedCart = cart.filter(item => item.cartId !== cartId);
+        setCart(updatedCart);
     };
 
     const removeFromWishlist = (productId) => {

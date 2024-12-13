@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { SiEngadget } from "react-icons/si";
 import { BsCart3 } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
@@ -7,11 +7,14 @@ import { AppContext } from '../context/AppContext';
 
 const Navbar = () => {
     const { cart, wishlist } = useContext(AppContext);
+    const location = useLocation();
+
+    const isHomePage = location.pathname === '/';
+    const navbarBgColor = isHomePage ? 'bg-purple-500' : 'bg-slate-500';
 
     return (
-        <nav className={`bg-purple-500 p-4 rounded-t-xl`}>
+        <nav className={`${navbarBgColor} p-4 rounded-t-xl`}>
             <div className="container mx-auto flex justify-between items-center">
-                {/* Logo Section */}
                 <div className="flex items-center">
                     <SiEngadget className="text-white text-2xl mr-2" />
                     <div className="text-white text-lg font-bold">Gadget Heaven</div>
@@ -20,25 +23,25 @@ const Navbar = () => {
                 <div className="flex space-x-4">
                     <NavLink
                         to="/"
-                        className="text-white"
+                        className={({ isActive }) => isActive ? 'text-yellow-400' : 'text-white'}
                     >
                         Home
                     </NavLink>
                     <NavLink
                         to="/statistics"
-                        className="text-white"
+                        className={({ isActive }) => isActive ? 'text-yellow-400' : 'text-white'}
                     >
                         Statistics
                     </NavLink>
                     <NavLink
                         to="/dashboard"
-                        className="text-white"
+                        className={({ isActive }) => isActive ? 'text-yellow-400' : 'text-white'}
                     >
                         Dashboard
                     </NavLink>
                     <NavLink
                         to="/support"
-                        className="text-white"
+                        className={({ isActive }) => isActive ? 'text-yellow-400' : 'text-white'}
                     >
                         Support
                     </NavLink>

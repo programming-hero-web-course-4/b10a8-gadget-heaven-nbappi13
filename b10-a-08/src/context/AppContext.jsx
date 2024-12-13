@@ -27,6 +27,10 @@ const AppProvider = ({ children }) => {
         setCart(updatedCart);
     };
 
+    const clearCart = () => {
+        setCart([]);
+    };
+
     const removeFromWishlist = (productId) => {
         const updatedWishlist = wishlist.filter(item => item.product_id !== productId);
         setWishlist(updatedWishlist);
@@ -38,7 +42,7 @@ const AppProvider = ({ children }) => {
     };
 
     return (
-        <AppContext.Provider value={{ cart, wishlist, addToCart, addToWishlist, removeFromCart, removeFromWishlist, moveToCartFromWishlist }}>
+        <AppContext.Provider value={{ cart, wishlist, addToCart, addToWishlist, removeFromCart, clearCart, removeFromWishlist, moveToCartFromWishlist }}>
             {children}
         </AppContext.Provider>
     );

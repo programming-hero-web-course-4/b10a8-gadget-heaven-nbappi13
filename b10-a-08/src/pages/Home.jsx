@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Banner from '../components/Banner';
 import CategoriesSidebar from '../components/CategoriesSidebar';
 import GadgetsCards from '../components/GadgetsCards';
@@ -76,6 +77,9 @@ const Home = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Home</title>
+            </Helmet>
             <div className="mb-8">
                 <Banner />
             </div>

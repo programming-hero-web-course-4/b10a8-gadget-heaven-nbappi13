@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { AppContext } from '../context/AppContext';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -30,6 +31,9 @@ const WishlistPage = () => {
 
     return (
         <div className="container mx-auto p-6">
+            <Helmet>
+                <title>Wishlist</title>
+            </Helmet>
             <h2 className="text-2xl font-bold mb-4">Wishlist</h2>
             {localWishlist.length === 0 ? (
                 <p>Your wishlist is empty.</p>

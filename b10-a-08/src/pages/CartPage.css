@@ -1,4 +1,4 @@
-/* Animation for item removal */
+
 .fade-out-item {
     animation: fadeOutItem 0.5s ease-out forwards;
 }
@@ -14,7 +14,6 @@
     }
 }
 
-/* Hover effect for cards */
 .card-item {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

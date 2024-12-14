@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import './Support.css'; 
 
 const Support = () => {
@@ -8,7 +9,6 @@ const Support = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
 
         const formData = { name, email, message };
         localStorage.setItem('supportFormData', JSON.stringify(formData));
@@ -23,6 +23,9 @@ const Support = () => {
 
     return (
         <div className="support-page container mx-auto p-6">
+            <Helmet>
+                <title>Support</title>
+            </Helmet>
             <div className="support-header text-center bg-gradient-to-r from-blue-500 to-purple-500 text-white py-10 rounded-lg mb-8">
                 <h2 className="text-4xl font-bold mb-4">Welcome to Our Support Center!</h2>
                 <p className="text-lg">How can we assist you today? We're here to make your experience smooth and enjoyable.</p>

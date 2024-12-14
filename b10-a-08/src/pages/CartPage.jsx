@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
 import { toast, ToastContainer } from 'react-toastify';
@@ -51,11 +52,14 @@ const CartPage = () => {
         setIsRedirecting(true);
         setTimeout(() => {
             navigate('/');
-        }, 2000);
+        }, 1500);
     };
 
     return (
         <div className={`container mx-auto p-6 ${isRedirecting ? 'fade-out' : ''}`}>
+            <Helmet>
+                <title>Shopping Cart</title>
+            </Helmet>
             <h2 className="text-2xl font-bold mb-4">Shopping Cart</h2>
             <div className="flex justify-between mb-4">
                 <p className='mx-auto mr-80 text-xl font-bold'>Total Cost: ${sortedCart.reduce((total, item) => total + item.price, 0)}</p>

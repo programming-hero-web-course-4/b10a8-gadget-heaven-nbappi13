@@ -1,4 +1,5 @@
 import React, { createContext, useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
 
 export const AppContext = createContext();
 
@@ -12,8 +13,14 @@ const AppProvider = ({ children }) => {
     }, [cart, wishlist]);
 
     const addToCart = (product) => {
+        const totalCartValue = cart.reduce((total, item) => total + item.price, 0);
+        if (totalCartValue + product.price > 1000) {
+            toast.error("Cart limit exceeded!");
+            return false;
+        }
         const item = { ...product, cartId: Date.now() }; 
         setCart([...cart, item]);
+        return true;
     };
 
     const addToWishlist = (product) => {
@@ -37,8 +44,15 @@ const AppProvider = ({ children }) => {
     };
 
     const moveToCartFromWishlist = (product) => {
+        const totalCartValue = cart.reduce((total, item) => total + item.price, 0);
+        if (totalCartValue + product.price > 1000) {
+            toast.error("Cart limit exceeded!");
+            return false;
+        }
         removeFromWishlist(product.product_id);
-        addToCart(product);
+        const item = { ...product, cartId: Date.now() }; 
+        setCart([...cart, item]);
+        return true;
     };
 
     return (

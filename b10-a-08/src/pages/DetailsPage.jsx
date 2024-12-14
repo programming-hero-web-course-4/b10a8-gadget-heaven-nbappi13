@@ -29,8 +29,9 @@ const DetailsPage = () => {
     }, [productId, wishlist, cart]);
 
     const handleAddToCart = () => {
-        addToCart(product);
-        toast.success("Item added to cart!");
+        if (addToCart(product)) {
+            toast.success("Item added to cart!");
+        }
     };
 
     const handleAddToWishlist = () => {

@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import './WishlistPage.css';
 
 const WishlistPage = () => {
-    const { wishlist, moveToCartFromWishlist, removeFromWishlist } = useContext(AppContext);
+    const { wishlist, moveToCartFromWishlist, removeFromWishlist, cart } = useContext(AppContext);
     const [localWishlist, setLocalWishlist] = useState([...wishlist]);
 
     useEffect(() => {
@@ -14,11 +14,18 @@ const WishlistPage = () => {
     }, [wishlist]);
 
     const handleMoveToCart = (item) => {
-        moveToCartFromWishlist(item);
-        setLocalWishlist(prevWishlist => prevWishlist.filter(w => w.product_id !== item.product_id));
-        setTimeout(() => {
-            toast.success("Item moved to cart!");
-        }, 500); 
+        const totalCartValue = cart.reduce((total, c) => total + c.price, 0);
+        if (totalCartValue + item.price > 1000) {
+            toast.error("Cart limit exceeded!");
+        } else {
+            const success = moveToCartFromWishlist(item);
+            if (success) {
+                setLocalWishlist(prevWishlist => prevWishlist.filter(w => w.product_id !== item.product_id));
+                setTimeout(() => {
+                    toast.success("Item moved to cart!");
+                }, 500); 
+            }
+        }
     };
 
     const handleRemoveFromWishlist = (productId) => {

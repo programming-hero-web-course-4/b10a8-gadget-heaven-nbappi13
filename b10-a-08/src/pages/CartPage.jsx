@@ -80,7 +80,7 @@ const CartPage = () => {
             ) : (
                 <div className="flex flex-col gap-4">
                     {sortedCart.map((item) => (
-                        <div key={item.cartId} className="bg-white p-4 rounded-md shadow-md flex items-center">
+                        <div key={item.cartId} className="bg-white p-4 rounded-md shadow-md flex items-center card-item">
                             <img 
                                 src={item.product_image} 
                                 alt={item.product_title} 

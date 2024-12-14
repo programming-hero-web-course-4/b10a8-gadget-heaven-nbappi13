@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import { AppContext } from '../context/AppContext';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import './WishlistPage.css';
 
 const WishlistPage = () => {
     const { wishlist, moveToCartFromWishlist, removeFromWishlist } = useContext(AppContext);
@@ -35,7 +36,7 @@ const WishlistPage = () => {
             ) : (
                 <div className="flex flex-col gap-4">
                     {localWishlist.map((item, index) => (
-                        <div key={index} className="bg-white p-4 rounded-md shadow-md flex items-center">
+                        <div key={index} className="bg-white p-4 rounded-md shadow-md flex items-center wishlist-item">
                             <img src={item.product_image} alt={item.product_title} className="w-32 h-32 object-cover rounded-md mr-4" />
                             <div className="flex-1">
                                 <h4 className="font-bold text-lg mb-2">{item.product_title}</h4>

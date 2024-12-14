@@ -1,3 +1,13 @@
+/* Smooth transition for wishlist items */
+.wishlist-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wishlist-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
 /* Animation for item removal */
 .fade-out-item {
     animation: fadeOutItem 0.5s ease-out forwards;
@@ -12,14 +22,4 @@
         opacity: 0;
         transform: translateY(-10px);
     }
-}
-
-/* Hover effect for cards */
-.card-item {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-item:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }

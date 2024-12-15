@@ -29,21 +29,22 @@ const CartPage = () => {
   };
 
   const handleSortByPrice = () => {
-    toast.dismiss(); 
     const sorted = [...cart].sort((a, b) => b.price - a.price);
     setSortedCart(sorted);
-    toast.success("Cart items sorted by price!", { toastId: "sort-toast" });
   };
 
   const handlePurchase = (item) => {
-    setModalMessage(`🎉 Congratulations! You purchased ${item.product_title}!`);
+    setModalMessage(`🎉 Congratulations!... 😊
+    You purchased ${item.product_title}!`);
     setModalImage(item.product_image);
     setShowModal(true);
     removeFromCart(item.cartId);
   };
 
   const handlePurchaseAll = () => {
-    setModalMessage(`🎉 Congratulations! You purchased all ${sortedCart.length} items! 🛒`);
+    setModalMessage(`🎉 Congratulations! 😊
+      Payment successfully done!
+      You purchased all the ${sortedCart.length} items! 🛒`);
     setModalImage("");
     setShowModal(true);
     clearCart();

@@ -4,6 +4,7 @@ import { SiEngadget } from "react-icons/si";
 import { BsCart3 } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
 import { AppContext } from '../context/AppContext';
+import { toast } from 'react-toastify';
 
 const Navbar = () => {
     const { cart, wishlist } = useContext(AppContext);
@@ -11,6 +12,10 @@ const Navbar = () => {
 
     const isHomePage = location.pathname === '/';
     const navbarBgColor = isHomePage ? 'bg-purple-500' : 'bg-slate-500';
+
+    const handleNavClick = () => {
+        toast.dismiss(); 
+    };
 
     return (
         <nav className={`${navbarBgColor} p-4 rounded-t-xl`}>
@@ -36,6 +41,7 @@ const Navbar = () => {
                     <NavLink
                         to="/dashboard"
                         className={({ isActive }) => isActive ? 'text-yellow-400' : 'text-white'}
+                        onClick={handleNavClick}
                     >
                         Dashboard
                     </NavLink>
@@ -52,6 +58,7 @@ const Navbar = () => {
                         <NavLink
                             to="/dashboard/cart"
                             className={({ isActive }) => isActive ? 'text-yellow-400 relative' : 'text-slate-300 relative'}
+                            onClick={handleNavClick}
                         >
                             <BsCart3 className="text-xl" />
                             {cart.length > 0 && (
@@ -64,7 +71,7 @@ const Navbar = () => {
                     <div className="relative bg-white rounded-full py-2 px-2">
                         <NavLink
                             to="/dashboard/wishlist"
-                            className={({ isActive }) => isActive ? 'text-yellow-400  relative' : 'text-slate-300 relative'}
+                            className={({ isActive }) => isActive ? 'text-yellow-400 relative' : 'text-slate-300 relative'}
                         >
                             <FaRegHeart className="text-xl" />
                             {wishlist.length > 0 && (
